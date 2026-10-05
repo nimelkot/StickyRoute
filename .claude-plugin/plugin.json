@@ -1,0 +1,6 @@
+{
+  "name": "sticky-route",
+  "version": "0.1.0",
+  "description": "Deterministic SQL compute routing with warm-state affinity and hysteresis",
+  "hooks": "./hooks/hooks.json"
+}

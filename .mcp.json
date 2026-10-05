@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sticky-route": {
+      "command": "sticky-route-mcp",
+      "args": []
+    }
+  }
+}

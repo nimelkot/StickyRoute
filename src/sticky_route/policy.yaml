@@ -1,0 +1,19 @@
+tiers:
+  light:
+    snowflake: WH_DEV_XS
+    databricks: 2X-Small
+  medium:
+    snowflake: WH_ANALYTICS_MEDIUM
+    databricks: Small
+  heavy:
+    snowflake: WH_DEV_L
+    databricks: Medium
+switching_rules:
+  prefer_warm: true
+  idle_window_seconds: 300
+  downgrade_threshold_queries: 5
+  escalation_min_savings_seconds: 30
+  estimated_speedup_seconds:
+    light: 0
+    medium: 12
+    heavy: 45

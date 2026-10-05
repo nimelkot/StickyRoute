@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sticky-route"
+version = "0.1.0"
+description = "Deterministic SQL compute routing with warm-state affinity and hysteresis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = ["PyYAML>=6,<7", "sqlglot>=26,<30"]
+
+[project.scripts]
+sticky-route = "sticky_route.cli:main"
+sticky-route-mcp = "sticky_route.mcp_server:main"
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.9,<2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sticky_route = ["policy.yaml"]
